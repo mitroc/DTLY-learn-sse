@@ -1,0 +1,12 @@
+{
+  "name": "sse-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.7.1"
+  }
+}

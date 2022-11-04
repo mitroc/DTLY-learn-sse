@@ -1,0 +1,26 @@
+<h1>Server Side Events</h1>
+<div id="root">
+  <p id="time"></p>
+  <div id="timestamp"></div>
+</div>
+<script>
+  console.log('Start');
+
+  const eventSource = new EventSource(' http://localhost:5000/events');
+  console.log('EventSource:', eventSource);
+
+  eventSource.onopen = event => {
+    console.log('Open', event);
+  };
+
+  eventSource.addEventListener('heartbeat', event => {
+    console.log('Heartbeat', event);
+    const container = document.querySelector('#root');
+    const time = document.querySelector('#time');
+    const timestamp = document.querySelector('#timestamp');
+
+    time.textContent = '';
+    time.textContent = event.data;
+    timestamp.append(`${event.timeStamp.toFixed()}\n`);
+  });
+</script>

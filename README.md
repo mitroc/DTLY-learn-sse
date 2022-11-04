@@ -89,7 +89,7 @@ res.write('\n\n');
 
 ### Front
 
-- otwieramy w WS `front.html` i używamy WSowego wbudowanego serwera (klik na
+- otwieramy w WS `src/front.html` i używamy WSowego wbudowanego serwera (klik na
   którąś z przeglądarek), albo
 - otwieramy w VSCode i używamy LiveServer, albo
 - odpalamy `node src/www.js` i wbijamy na wyświetlony link
